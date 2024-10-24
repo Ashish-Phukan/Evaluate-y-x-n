@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+#define MAX_SIZE 100
+
+
+void unionSets(int setA[], int sizeA, int setB[], int sizeB) {
+    int unionSet[MAX_SIZE];
+    int unionSize = 0;
+
+
+    for (int i = 0; i < sizeA; i++) {
+        unionSet[unionSize++] = setA[i];
+    }
+
+    for (int i = 0; i < sizeB; i++) {
+        int found = 0;
+        for (int j = 0; j < unionSize; j++) {
+            if (setB[i] == unionSet[j]) {
+                found = 1;
+                break;
+            }
+        }
+        if (!found) {
+            unionSet[unionSize++] = setB[i];
+        }
+    }
+
+
+    printf("Union of the two sets: { ");
+    for (int i = 0; i < unionSize; i++) {
+        printf("%d ", unionSet[i]);
+    }
+    printf("}\n");
+}
+
+int main() {
+    int setA[] = {1, 2, 3};
+    int setB[] = {3, 4, 5};
+    
+    int sizeA = sizeof(setA) / sizeof(setA[0]);
+    int sizeB = sizeof(setB) / sizeof(setB[0]);
+
+    unionSets(setA, sizeA, setB, sizeB);
+
+    return 0;
+}
