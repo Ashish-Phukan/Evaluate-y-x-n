@@ -1,0 +1,38 @@
+// 2.	Student Result Calculation:
+#include <stdio.h>
+
+struct Student {
+    int rollNumber;
+    char name[50];
+    float marks[3];
+};
+
+int main() {
+    struct Student student;
+    float total = 0.0, average;
+
+    // Input student details
+    printf("Enter roll number: ");
+    scanf("%d", &student.rollNumber);
+
+    printf("Enter name: ");
+    scanf(" %[^\n]", student.name); // To read a line with spaces
+
+    printf("Enter marks in 3 subjects: ");
+    for (int i = 0; i < 3; i++) {
+        scanf("%f", &student.marks[i]);
+        total += student.marks[i];
+    }
+
+    // Calculate average
+    average = total / 3;
+
+    // Display student details with total and average
+    printf("\nStudent Details:\n");
+    printf("Roll Number: %d\n", student.rollNumber);
+    printf("Name: %s\n", student.name);
+    printf("Total Marks: %.2f\n", total);
+    printf("Average Marks: %.2f\n", average);
+
+    return 0;
+}
