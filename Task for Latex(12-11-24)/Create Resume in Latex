@@ -1,0 +1,87 @@
+// Create Resume in Latex
+
+\documentclass[a4paper,10pt]{article}
+
+% Packages
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{hyperref} % For hyperlinks
+\usepackage{enumitem} % For custom lists
+\usepackage{xcolor} % For colored text
+\usepackage{parskip} % To remove paragraph indentation
+\usepackage{fancyhdr} % For custom headers
+
+% Custom commands
+\newcommand{\header}[1]{\noindent\textbf{\Large #1}} % Section Header
+\newcommand{\subheader}[1]{\noindent\textbf{#1}} % Subsection Header
+\newcommand{\resumeitem}[1]{\item \small{#1}} % Resume Item
+\newcommand{\bold}[1]{\textbf{#1}} % Bold Text
+
+% Header for the document
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textcolor{blue}{Ashish}} % Right header with name
+\lhead{\textcolor{blue}{Resume}} % Left header
+\cfoot{\thepage} % Page number at the bottom center
+
+\begin{document}
+
+% Name and contact information
+\begin{center}
+    {\LARGE \textbf{Ashish Phukan}} \\
+    \href{mailto:ashishphukan2002@gmail.com}{ashishphukan2002@gmail.com} | (+91)9211420720 | \href{https://www.linkedin.com/in/Ashish}{linkedin.com/in/Ashish} | \href{https://github.com/Ashish}{github.com/Ashish}
+\end{center}
+
+% Experience Section
+
+\header{Experience}\\
+
+\subheader{Software Engineer | ABC Corp.} \hfill \textbf{Jan 2022 – Present}
+\begin{itemize}[left=0in, labelsep=0.25in]
+    \resumeitem{Developed and maintained scalable web applications using Python, Django, and React.}
+    \resumeitem{Collaborated with cross-functional teams to design and implement software solutions for clients in the finance industry.}
+    \resumeitem{Utilized RESTful APIs for data exchange and integrated third-party APIs to enhance application functionality.}
+    \resumeitem{Led code reviews and mentored junior developers in best practices and efficient problem-solving techniques.}
+\end{itemize} \
+
+
+% Education Section
+\header{Education}\\
+
+\subheader{Bachelor in Computer Application} \hfill \textbf{2020 – 2023} \\\\
+ Dibrugarh University, India
+\begin{itemize}[left=0in, labelsep=0.25in]
+    \resumeitem{Graduated, GPA: 7.67/10.0}
+    \resumeitem{Relevant Coursework: Data Structures, Algorithms, Operating Systems, Software Engineering}\\
+\end{itemize}
+
+% Skills Section
+\header{Skills}
+\begin{itemize}[left=0in, labelsep=0.25in]
+    \resumeitem{Languages: Python, Java, JavaScript, C++}    
+    \resumeitem{Databases: MySQL, PostgreSQL, MongoDB}\\
+    \resumeitem{Operating Systems: Linux, Windows, macOS}\\
+\end{itemize}
+
+% Projects Section
+\header{Projects}\\
+
+\subheader{E-commerce Platform} \hfill \textbf{Sept 2023 – Dec 2023}
+\begin{itemize}[left=0in, labelsep=0.25in]
+    \resumeitem{Built an e-commerce platform using Java Spring Boot for the back-end and Angular for the front-end.}
+    \resumeitem{Implemented features such as product search, order management, and user authentication.}\\
+\end{itemize}
+
+% Certifications Section
+\header{Certifications}
+\begin{itemize}[left=0in, labelsep=0.25in]
+    \resumeitem{Certified Kubernetes Administrator (CKA) – Linux Foundation, 2023}
+    \resumeitem{AWS Certified Solutions Architect – Amazon Web Services, 2022}\\
+\end{itemize}
+
+% Interests Section
+\header{Interests}
+\begin{itemize}[left=0in, labelsep=0.25in]
+    \resumeitem{Open-source contribution, Artificial Intelligence, Cloud Computing, Playing Chess, Traveling}
+\end{itemize}
+
+\end{document}
